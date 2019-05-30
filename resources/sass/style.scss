@@ -1,0 +1,69 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+table {
+    border: 1px solid #dee2e6;
+
+    thead {
+        font-size: 1.5rem;
+        /*color: #fff;*/
+        /*background-color: #212925;*/
+    }
+
+    th, td {
+        padding: 0.5rem !important;
+    }
+}
+
+button {
+    i.diamante {
+        color: #B9F2FF;
+    }
+
+    i.platina {
+        color: #9c9b99;
+    }
+
+    i.ouro {
+        color: #d4af37;
+    }
+
+    i.prata {
+        color: #d3d3d3;
+    }
+
+    i.bronze {
+        color: #b86c25;
+    }
+}
+
+/*
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 30px;
+    width: 30px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+    content: '>';
+    font-size: 17px;
+    color: red;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<';
+    font-size: 17px;
+    color: red;
+}
+*/
