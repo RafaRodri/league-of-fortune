@@ -269,11 +269,6 @@ class DatabaseSeeder extends Seeder
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '2',
-            'vencedor' => '2',
-        ]);
-        Game::create([
-            'id_torneio' => '1',
             'id_rodada' => '1',
             'vencedor' => '3',
         ]);
@@ -281,6 +276,46 @@ class DatabaseSeeder extends Seeder
             'id_torneio' => '1',
             'id_rodada' => '1',
             'vencedor' => '6',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '7',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '10',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '12',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '13',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '16',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '17',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '1',
+            'vencedor' => '20',
+        ]);
+        Game::create([
+            'id_torneio' => '1',
+            'id_rodada' => '2',
+            'vencedor' => '1',
         ]);
         Game::create([
             'id_torneio' => '1',
@@ -299,43 +334,113 @@ class DatabaseSeeder extends Seeder
             'pontos' => '88.05',
         ]);
         TeamsGames::create([
-            'id_team' => '7',
-            'id_game' => '2',
-            'pontos' => '77.05',
-        ]);
-        TeamsGames::create([
-            'id_team' => '8',
+            'id_team' => '3',
             'id_game' => '2',
             'pontos' => '102.05',
         ]);
         TeamsGames::create([
-            'id_team' => '3',
+            'id_team' => '4',
+            'id_game' => '2',
+            'pontos' => '77.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '5',
             'id_game' => '3',
             'pontos' => '91.05',
         ]);
         TeamsGames::create([
-            'id_team' => '4',
-            'id_game' => '3',
-            'pontos' => '49.99',
-        ]);
-        TeamsGames::create([
-            'id_team' => '5',
-            'id_game' => '4',
-            'pontos' => '51.00',
-        ]);
-        TeamsGames::create([
             'id_team' => '6',
+            'id_game' => '3',
+            'pontos' => '99.99',
+        ]);
+        TeamsGames::create([
+            'id_team' => '7',
+            'id_game' => '4',
+            'pontos' => '81.00',
+        ]);
+        TeamsGames::create([
+            'id_team' => '8',
             'id_game' => '4',
             'pontos' => '82.05',
         ]);
         TeamsGames::create([
             'id_team' => '9',
             'id_game' => '5',
-            'pontos' => null,
+            'pontos' => '75.22',
         ]);
         TeamsGames::create([
             'id_team' => '10',
             'id_game' => '5',
+            'pontos' => '82.45',
+        ]);
+        TeamsGames::create([
+            'id_team' => '11',
+            'id_game' => '6',
+            'pontos' => '92.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '12',
+            'id_game' => '6',
+            'pontos' => '108.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '13',
+            'id_game' => '7',
+            'pontos' => '77.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '14',
+            'id_game' => '7',
+            'pontos' => '42.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '15',
+            'id_game' => '8',
+            'pontos' => '41.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '16',
+            'id_game' => '8',
+            'pontos' => '49.99',
+        ]);
+        TeamsGames::create([
+            'id_team' => '17',
+            'id_game' => '9',
+            'pontos' => '81.00',
+        ]);
+        TeamsGames::create([
+            'id_team' => '18',
+            'id_game' => '9',
+            'pontos' => '72.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '19',
+            'id_game' => '10',
+            'pontos' => '75.22',
+        ]);
+        TeamsGames::create([
+            'id_team' => '20',
+            'id_game' => '10',
+            'pontos' => '122.45',
+        ]);
+        TeamsGames::create([
+            'id_team' => '1',
+            'id_game' => '11',
+            'pontos' => '81.00',
+        ]);
+        TeamsGames::create([
+            'id_team' => '3',
+            'id_game' => '11',
+            'pontos' => '72.05',
+        ]);
+        TeamsGames::create([
+            'id_team' => '2',
+            'id_game' => '12',
+            'pontos' => null,
+        ]);
+        TeamsGames::create([
+            'id_team' => '4',
+            'id_game' => '12',
             'pontos' => null,
         ]);
 

@@ -78,9 +78,6 @@ class TournamentController extends Controller
          **/
 
 
-        #dd($teams[0]->ranking->first());
-
-
         return view('tournament.league', [
             'teams' => $teams,
             'games' => $rodada->game,
