@@ -1,9 +1,7 @@
 <?php
 
-use App\Game;
-use App\Round;
+use App\Sponsor;
 use App\Team;
-use App\TeamsGames;
 use App\TeamsTournaments;
 use App\Tournament;
 use App\Type;
@@ -214,113 +212,151 @@ class DatabaseSeeder extends Seeder
             'url_escudo_svg' => 'https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_142/escudo/ac/47/07/006bf3d255-2266-4d61-bf9b-708a5f737cac20190426154707',
             'foto_perfil' => 'https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/placeholder/perfil.png',
         ]);
-
-        Round::create([
-            'rodada' => '1',
-            'data' => '2019-05-25',
+        Team::create([
+            'id_cartola' => '13966101',
+            'nome_cartola' => 'Diego Philipe Guedes',
+            'nome_time' => 'VeemTranquiloFFC',
+            'slug_time' => 'veemtranquiloffc',
+            'facebook_id' => '664365396931987',
+            'url_escudo_png' => 'https://s2.glbimg.com/m2xBD17Ldx8C_cWkxQO0S3nDU-A=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_105/escudo/83/26/21/00d1cff02b-7921-4953-a763-b0c19261588320180406002621',
+            'url_escudo_svg' => 'https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_105/escudo/83/26/21/00d1cff02b-7921-4953-a763-b0c19261588320180406002621',
+            'foto_perfil' => 'https://graph.facebook.com/v2.9/664365396931987/picture?width=100&height=100',
         ]);
-        Round::create([
-            'rodada' => '2',
-            'data' => '2019-06-01',
-        ]);
-        Round::create([
-            'rodada' => '3',
-            'data' => '2019-06-08',
+        Team::create([
+            'id_cartola' => '2235709',
+            'nome_cartola' => 'Itamar Adônis',
+            'nome_time' => 'Sinoda Fla',
+            'slug_time' => 'sinoda-fla',
+            'facebook_id' => null,
+            'url_escudo_png' => 'https://s2.glbimg.com/bTRl0yOMue8nnaYKPRwyt0SjAaE=/https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_100/escudo/a0/07/41/007f43a55e-1c5f-4cd7-85bb-9f9f54bdd0a020180322140741',
+            'url_escudo_svg' => 'https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/cartola_svg_100/escudo/a0/07/41/007f43a55e-1c5f-4cd7-85bb-9f9f54bdd0a020180322140741',
+            'foto_perfil' => 'https://s3.glbimg.com/v1/AUTH_58d78b787ec34892b5aaa0c7a146155f/placeholder/perfil.png',
         ]);
 
         Type::create([
             'nome' => 'Liga',
-            'descricao' => '',
+            'descricao' => null,
         ]);
         Type::create([
             'nome' => 'Copa',
-            'descricao' => '',
+            'descricao' => null,
         ]);
         Type::create([
             'nome' => 'Champions',
-            'descricao' => '',
+            'descricao' => null,
+        ]);
+
+        Sponsor::create([
+            'nome' => 'Crefisa',
+            'url_logo_png' => null,
+            'descricao' => null,
+        ]);
+        Sponsor::create([
+            'nome' => 'FAM',
+            'url_logo_png' => null,
+            'descricao' => null,
         ]);
 
         Tournament::create([
             'id_tipo' => '1',
             'nome' => 'Diamante',
+            'qtd_participantes' => 20,
+            'id_patrocinio' => null,
             'temporada' => '2019',
         ]);
         Tournament::create([
             'id_tipo' => '1',
             'nome' => 'Platina',
+            'qtd_participantes' => 20,
+            'id_patrocinio' => null,
             'temporada' => '2019',
         ]);
         Tournament::create([
             'id_tipo' => '1',
             'nome' => 'Ouro',
+            'qtd_participantes' => 20,
+            'id_patrocinio' => null,
             'temporada' => '2019',
         ]);
         Tournament::create([
             'id_tipo' => '1',
             'nome' => 'Prata',
+            'qtd_participantes' => 20,
+            'id_patrocinio' => null,
             'temporada' => '2019',
         ]);
 
-        Game::create([
+        /*Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '1',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '3',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '6',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '7',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '10',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '12',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '13',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '16',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '17',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '1',
+            'rodada' => '1',
             'vencedor' => '20',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '2',
+            'rodada' => '2',
             'vencedor' => '1',
+            'data' => '2019-05-25',
         ]);
         Game::create([
             'id_torneio' => '1',
-            'id_rodada' => '2',
+            'rodada' => '2',
             'vencedor' => null,
+            'data' => '2019-05-25',
         ]);
 
         TeamsGames::create([
@@ -442,7 +478,7 @@ class DatabaseSeeder extends Seeder
             'id_team' => '4',
             'id_game' => '12',
             'pontos' => null,
-        ]);
+        ]);*/
 
         TeamsTournaments::create([
             'id_team' => '1',
@@ -623,6 +659,15 @@ class DatabaseSeeder extends Seeder
             'empates' => '1',
             'pontos_favor' => '135.50',
             'pontos_contra' => '151.29',
+        ]);
+        TeamsTournaments::create([
+            'id_team' => '21',
+            'id_tournament' => '2',
+            'vitorias' => '1',
+            'derrotas' => '2',
+            'empates' => '1',
+            'pontos_favor' => '182.44',
+            'pontos_contra' => '148.92',
         ]);
     }
 }

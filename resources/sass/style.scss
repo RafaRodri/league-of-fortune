@@ -5,7 +5,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-
+/* Page Liga */
 table {
     border: 1px solid #dee2e6;
 
@@ -42,28 +42,25 @@ button {
     }
 }
 
-/*
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    height: 30px;
-    width: 30px;
-    outline: black;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-image: none;
-}
+/* Page Dashboard Games */
+table.dash-games {
+    input{
+        display: inline;
+        width: 80px !important;
+        padding: 0.1rem;
+        text-align: center;
+    }
 
-.carousel-control-next-icon:after
-{
-    content: '>';
-    font-size: 17px;
-    color: red;
-}
+    .btn{
+        display: inline;
+    }
 
-.carousel-control-prev-icon:after {
-    content: '<';
-    font-size: 17px;
-    color: red;
+    .team {
+        display: inline-grid;
+        overflow: hidden;
+        flex-wrap: nowrap;
+        text-overflow: ellipsis;
+        width: 100px;
+        height: 1.4rem;
+    }
 }
-*/

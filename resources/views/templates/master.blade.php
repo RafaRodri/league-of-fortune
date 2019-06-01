@@ -7,13 +7,13 @@
     <title>League of Fortune</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/font-google-family-nunito.css') }}">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
 
     <!-- Styles -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('css.view')
@@ -43,24 +43,38 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <!-- Menu usuário -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <span class="dropdown-item">Rafael, <p class="m-0">Real Flush</p></span>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{{ route('dash.tournaments.index') }}"><i
+                                class="fas fa-cogs"></i> Torneio</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Tipos de torneio</a>
+                    </div>
+                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('team.all') }}">Time<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{ route('team.all') }}">Time</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('tournament.league') }}">Liga<span class="sr-only"></span></a>
+                    <a class="nav-link" href="{{ route('tournament.league') }}">Liga</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="{{ route('index.champions') }}">Champions<span class="sr-only"></span></a>
+                    <a class="nav-link disabled" href="{{ route('index.champions') }}">Champions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="{{ route('index.cup') }}">Copa<span class="sr-only"></span></a>
+                    <a class="nav-link disabled" href="{{ route('index.cup') }}">Copa</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="{{ route('index.hall') }}">Hall da Fama<span
-                            class="sr-only"></span></a>
+                    <a class="nav-link disabled" href="{{ route('index.hall') }}">Hall da Fama</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('index.prize') }}">Prêmios<span class="sr-only"></span></a>
+                    <a class="nav-link" href="{{ route('index.prize') }}">Prêmios</a>
                 </li>
             </ul>
         </div>
@@ -71,8 +85,9 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 @yield('js.view')
 </body>
 </html>

@@ -17,7 +17,9 @@ class CreateTournamentsTable extends Migration
             $table->increments('id');
 
             $table->unsignedInteger('id_tipo');
+            $table->unsignedInteger('id_patrocinio')->nullable();
             $table->string('nome');
+            $table->integer('qtd_participantes');
             $table->integer('temporada');
 
             $table->timestampsTz();
@@ -25,6 +27,7 @@ class CreateTournamentsTable extends Migration
 
 
             $table->foreign('id_tipo')->references('id')->on('types');
+            $table->foreign('id_patrocinio')->references('id')->on('sponsors');
         });
     }
 
@@ -37,6 +40,7 @@ class CreateTournamentsTable extends Migration
     {
         Schema::table('tournaments', function (Blueprint $table) {
             $table->dropForeign('tournaments_id_tipo_foreign');
+            $table->dropForeign('tournaments_id_patrocinio_foreign');
         });
 
         Schema::dropIfExists('tournaments');

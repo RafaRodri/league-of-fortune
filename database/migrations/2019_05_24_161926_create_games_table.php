@@ -17,15 +17,16 @@ class CreateGamesTable extends Migration
             $table->increments('id');
 
             $table->unsignedInteger('id_torneio');
-            $table->unsignedInteger('id_rodada');
+            $table->integer('rodada');
             $table->integer('vencedor')->nullable();
+            $table->date('data')->nullable();
 
             $table->timestampsTz();
             $table->softDeletes();
 
 
             $table->foreign('id_torneio')->references('id')->on('tournaments');
-            $table->foreign('id_rodada')->references('id')->on('rounds');
+            /*$table->foreign('id_rodada')->references('id')->on('rounds');*/
         });
     }
 
@@ -39,7 +40,7 @@ class CreateGamesTable extends Migration
         Schema::create('games', function (Blueprint $table) {
             // Apagar foreign key (nome-da-tabela_nome-do-campo_foreign)
             $table->dropForeign('games_id_torneio_foreign');
-            $table->dropForeign('games_id_rodada_foreign');
+            /*$table->dropForeign('games_id_rodada_foreign');*/
         });
 
         Schema::dropIfExists('games');

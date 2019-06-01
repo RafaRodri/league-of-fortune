@@ -10,7 +10,9 @@ class Tournament extends Model
     protected $table = 'tournaments';
     protected $fillable = [
         'id_tipo',
+        'id_patrocinio',
         'nome',
+        'qtd_participantes',
         'temporada',
     ];
 
@@ -22,7 +24,11 @@ class Tournament extends Model
         return $this->belongsTo(Type::class, 'id_tipo');
     }
 
+    public function sponsor(){
+        return $this->belongsTo(Sponsor::class, 'id_patrocinio');
+    }
+
     public function game(){
-        return $this->hasMany(Game::class);
+        return $this->hasMany(Game::class, 'id_torneio');
     }
 }

@@ -10,8 +10,9 @@ class Game extends Model
     protected $table = 'games';
     protected $fillable = [
         'id_torneio',
-        'id_rodada',
+        'rodada',
         'vencedor',
+        'data',
     ];
 
     public function team(){
@@ -20,10 +21,6 @@ class Game extends Model
 
     public function score(){
         return $this->belongsToMany(Team::class, 'teams_games', 'id_game', 'id_team')->select('pontos');
-    }
-
-    public function round(){
-        return $this->belongsTo(Round::class);
     }
 
     public function tournament(){
